@@ -1,0 +1,80 @@
+body{
+    background-color: rgb(229, 229, 229);
+    font-family: 'Caprasimo', cursive;
+    color: #001C30;
+    background-color: #001C30;
+}
+.container{
+    height:100vh;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    width: 24rem;
+    height: 30rem;
+    background-color: #fff;
+    border-radius: 15px;
+}
+.card-title{
+    margin-top: 50px;
+    text-align: center;
+}
+.res-sec{
+    /* display: none; */
+    margin-block: 30px ;
+    margin-inline: 20px;
+    text-align: center;
+}
+#temprature-form{
+    text-align: center;
+}
+.form-rows{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-input{
+    font-weight: 600;
+    background-color: #001C30;
+    color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 9px;
+    text-align: center;
+}
+.form-selection{
+    font-weight: 600;
+    background-color: #001C30;
+    color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 9px;
+    text-align: center;
+}
+#form-submit{
+    font-weight: 600;
+    background-color: #001C30;
+    color: #fff;
+    padding: 10px;
+    padding-inline: 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 9px;
+    text-align: center;
+}
+#form-submit:hover{
+    background-color: #aad9f9;
+    color: #001C30;
+    font-weight: 600;
+    padding: 10px;
+    padding-inline: 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 9px;
+    text-align: center;
+}

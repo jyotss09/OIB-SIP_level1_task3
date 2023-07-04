@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temprature</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-title">
+                <h2>Convert Temprature</h2>
+                <br>
+            </div>
+            <div class="card-body">
+                <form action="" id="temprature-form">
+                    <label for="input">Enter temprature and its unit <br> that you want to convert</label>
+                    <div class="form-rows">
+                        <br>
+                        <input type="text" id="input" class="form-input" placeholder="Eg. 10 (℃/℉)">
+                        <select class="form-selection" id="inunit">
+                            <option selected>Select unit</option>
+                            <option value="1">Celcius (℃)</option>
+                            <option value="2">Farenhite (℉)</option>
+                        </select>
+
+                    </div>
+                    <button type="submit" id="form-submit">Calculate</button>
+                </form>
+                <div class="res-sec">
+                    <h4 id="result-temp">The Results</h4>
+                    <h2 id="result-ans" style="font-weight: 900;"></h2>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+    <script>
+
+        var result;   //variable to store result
+        var roundResult;   //variable to store result
+
+        // var resultSect = document.getElementsByClassName('res-sec');
+        // resultSect.style.display = "none";
+        tempForm = document.getElementById('temprature-form');
+        tempForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let intemp = document.getElementById('input').value;
+            let inunit = document.getElementById('inunit').value;
+            let resultText = document.getElementById('result-temp');
+            let resultAns = document.getElementById('result-ans');
+            // var resultSect = document.getElementsByClassName('res-sec');
+
+
+            // console.log(intemp);
+            // console.log(inunit);
+
+            // ℃ = 1 
+            // ℉ = 2 
+
+
+            //writing logic to convert celcius into fahrenheit 
+            // that is when input unit (inunit == 1)
+
+            if (inunit == 1) {
+                var cmid = intemp * 1.8;
+                result = cmid + 32;
+                roundResult = Math.round(result);
+                // console.log(roundResult);
+
+                resultText.innerText = 'The entered temprature ' + intemp + ' ℃ (Celcius) when converted in ℉ (Farenhite) is ' + roundResult + ' ℉ (.approx)';
+                resultAns.innerText = roundResult + ' ℉ (.approx)';
+            }
+
+            //writing logic to convert fahrenheit into celcius 
+            // that is when input unit (inunit == 2)
+
+            else if (inunit == 2) {
+                var fmid = intemp - 32
+                result = fmid * 0.56;
+                roundResult = Math.round(result);
+                // console.log(roundResult);   
+
+                resultText.innerText = 'The entered temprature ' + intemp + ' ℉ (Farenhite) when converted in ℃ (Celcius) is ' + roundResult + ' ℃ (.approx)';
+                resultAns.innerText = roundResult + ' ℃ (.approx)';
+
+            }
+
+
+            // resultSect.style.display = "block";
+
+
+        });
+    </script>
+
+</body>
+
+</html>
